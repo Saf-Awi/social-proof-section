@@ -1,0 +1,272 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+:root {
+    ---clr-very-dark-magenta: hsl(300, 43%, 22%);
+    --clr-soft-pink: hsl(333, 80%, 67%);
+    --clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+     --clr-white: hsl(0, 0%, 100%);
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+/*----- body ------*/
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    background: url(./images/bg-pattern-bottom-desktop.svg), url(./images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position:  center top 300px, center bottom 300px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 100px;
+    
+}
+
+
+
+/*----- top row ------*/
+
+.header-text {
+    color: var(---clr-very-dark-magenta);
+    font-size: 60px;
+    padding-right: 40px;
+    margin-left: 2rem;
+}
+
+.first-paragraph {
+    color: var(--clr-dark-grayish-magenta);
+    line-height: 1.2;
+    max-width: 350px;
+    margin: 1 auto;
+    text-align: left;
+    margin-left: 2rem;
+    
+    
+}
+
+.rating {
+    color: var(---clr-very-dark-magenta);
+    background-color: var(--clr-light-grayish-magenta);
+    padding: 1rem 2rem;
+    width: 60%;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+   
+}
+
+span {
+    margin-left: 2rem;
+
+
+}
+
+.rating svg {
+  margin-left: 2px;
+}
+
+
+
+.first-rating {
+    margin-top: 4rem;
+}
+
+.second-rating {
+    margin-left: 2rem;
+}
+
+.third-rating {
+    margin-left: 4rem;
+ 
+}
+
+
+.top-row {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+
+/*----- bottom-row ------*/
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+
+  
+    
+}
+
+.user-image {
+    border-radius: 50%;
+    max-width: 40px;
+
+   
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+ 
+
+}
+
+.commenter {
+    color: var(--clr-white);
+    
+}
+
+.commenter, .verfied-buyer {
+    margin: 10px 0 0 0;
+}
+
+
+.comment-paragraph {
+    color: var(--clr-white);
+    line-height: 1.2;
+}
+
+.verfied-buyer {
+    color: var(--clr-soft-pink);
+    font-weight: 400;
+
+}
+
+.comment {
+    background-color: var(---clr-very-dark-magenta);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-left: 30px;
+   
+}
+
+.first-comment {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+   
+}
+
+.second-comment {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.third-comment {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+/*----- mobile view ------*/
+
+@media  (max-width: 580px){
+
+body {
+    background: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: cover;
+}
+
+.main-container {
+    position: relative;
+    height: 50vh;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+}
+
+.header-text {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+}
+
+.first-paragraph {
+    color: var(--clr-dark-grayish-magenta);
+    line-height: 1.2;
+    max-width: 300px;
+    margin: 1 auto;
+    text-align: center;
+    margin-left: 0;
+    
+    
+}
+
+
+.first-rating, .second-rating, .third-rating {
+    margin: 10px;
+}
+
+.comment {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.rating {
+
+    padding: 0.5rem 4rem;
+    width: 50%;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.first-rating {
+    margin-top: 0;
+}
+
+.second-rating {
+    margin-left: 0;
+}
+
+.third-rating {
+    margin-left: 0;
+ 
+}
+
+span {
+    margin: 0;
+    white-space: nowrap;
+    
+}
+
+.comment-paragraph {
+    text-align: left;
+}
+
+.attribution {
+    display: none;
+   
+}
+
+}
